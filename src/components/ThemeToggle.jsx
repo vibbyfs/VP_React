@@ -33,13 +33,11 @@ export const ThemeToggle = () => {
 
   return (
     <>
-    <div className="relative">
-    <span className="absolute left-100 top-90 transform -translate-y-1/2 z-40 text-sm">Click If you want see Sun/Moon ➡️</span>
     <button
       onClick={toggleTheme}
       className={cn(
-        "absolute left-1/2 top-90 transform -translate-x-1/2 -translate-y-1/2 z-50 p-3 rounded-full bg-white dark:bg-black shadow-md ransition-colors duration-300"
-           
+        "fixed max-sm:hidden top-4 right-5 z-50 p-2 rounded-full transition-colors duration-300",
+        "focus:outlin-hidden"          
       )}
     >
       {isDarkMode ? (
@@ -48,7 +46,6 @@ export const ThemeToggle = () => {
         <Moon className="h-6 w-6 text-blue-900" />
       )}
     </button>
-    </div>
     </>
   );
 };
